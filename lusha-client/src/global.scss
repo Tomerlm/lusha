@@ -1,0 +1,51 @@
+body {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: hidden;
+}
+
+html,
+#root,
+.App {
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.scrollerContainer {
+  width: 400px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.pokemonView {
+  display: flex;
+  flex-direction: column;
+  align-items: 'center';
+  justify-content: flex-start;
+  background-color: aliceblue;
+  height: 400px;
+}
+
+.pokemonView > img {
+  height: 100%;
+}

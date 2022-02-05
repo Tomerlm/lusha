@@ -1,0 +1,110 @@
+@mixin disableTextSelection {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+.gridContainer {
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.gridContainer::-webkit-scrollbar {
+  display: none;
+}
+.gridBody {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 270px;
+
+  .imageViewContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: gainsboro;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 10px;
+    }
+
+    .imageOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-color: rgba(0, 9, 48, 0.575);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      border-radius: 10px;
+
+      .desc {
+        text-align: center;
+        width: 150px;
+        @include disableTextSelection;
+      }
+
+      .likesContainer {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include disableTextSelection;
+
+        .heart {
+          margin-right: 4px;
+          width: 25px;
+          color: white;
+        }
+
+        .heartRed {
+          animation: beat 0.2s;
+          animation-timing-function: cubic-bezier(0.79, -0.08, 0.37, 1.47);
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes beat {
+          0% {
+            transform: scale(1.1);
+            stroke: red;
+          }
+          100% {
+            transform: scale(1);
+            filter: saturate(100.5);
+            stroke: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gridBody {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 270px;
+  }
+}

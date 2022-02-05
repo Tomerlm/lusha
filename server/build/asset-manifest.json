@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.192078bb.css",
+    "main.js": "/static/js/main.bff1777c.js",
+    "static/media/iconmonstr-heart-thin.svg": "/static/media/iconmonstr-heart-thin.de70e8ece0ebf909b3f1d1b26474f00a.svg",
+    "index.html": "/index.html",
+    "main.192078bb.css.map": "/static/css/main.192078bb.css.map",
+    "main.bff1777c.js.map": "/static/js/main.bff1777c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.192078bb.css",
+    "static/js/main.bff1777c.js"
+  ]
+}

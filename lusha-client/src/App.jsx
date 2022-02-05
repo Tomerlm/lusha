@@ -1,11 +1,11 @@
 import './global.scss';
-import EventGrid from './components/Image/ImageGrid';
+import ImageGrid from './components/Image/ImageGrid';
 
 function App() {
   return (
     <div className="App">
       <div className="mainContainer">
-        <EventGrid></EventGrid>
+        <ImageGrid></ImageGrid>
       </div>
     </div>
   );

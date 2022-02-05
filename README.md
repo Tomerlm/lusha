@@ -1,6 +1,6 @@
 ## Getting Started
 
-use wsl or other bash-like terminal run
+from root dir, run
 
 ```dart
 ./run.sh
